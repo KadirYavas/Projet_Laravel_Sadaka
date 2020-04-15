@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index')->name('index');
+
+Route::get('/About', 'AboutController@index')->name('about');
+
+Route::get('/Gallery', 'GalleryController@index')->name('gallery');
+
+Route::get('/Contact', 'ContactController@index')->name('contact');
+
+Route::get('/Causes', 'CausesController@index')->name('causes');
+
+Route::get('/Causes-Single', 'CausesController@indexSingle')->name('causes-single');
 
 Auth::routes();
 

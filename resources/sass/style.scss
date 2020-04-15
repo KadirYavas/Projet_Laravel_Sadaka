@@ -10,12 +10,9 @@
 Imports & Variables
 ========================================================================== */
 /* Compass imports */
-@import "compass/utilities";
-@import "compass/css3/pie";
-@import "compass/css3";
-
-
-
+@import "~compass-mixins";
+// @import "~compass-mixins/compass/css3/pie";
+// @import "~compass-mixins/compass/css3";
 /* Variables */
 $color_main : #1f76bd ; // main bleu
 $color_secondary : #115c9b ; // dark blue
@@ -476,9 +473,9 @@ a {
 	}
 
 
-	.btn-holder {
+	// .btn-holder {
 
-	}
+	// }
 
 }
 
@@ -505,9 +502,9 @@ a {
 	}
 
 
-	.footer-col {
+	// .footer-col {
 
-	}
+	// }
 
 	.footer-title {
 

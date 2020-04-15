@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 
 /**
@@ -27,6 +28,16 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+// const app = new Vue({
+    //     el: '#app',
+    // });
+    
+    require('bootstrap');
+    require('jquery');
+    require('popper.js');
+    // require('jquery.easing');
+    // require('./js/jquery-1.11.1.min.js');
+    // require('./js/jquery.prettyPhoto');
+    require('./js/main');
+    require('owl.carousel');
+    // require('./js/modernizr-2.6.2.min.js');
