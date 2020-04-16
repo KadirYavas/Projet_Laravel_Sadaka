@@ -58,7 +58,7 @@
 
                   </button>
                   
-                  <a class="navbar-brand" href="index.html"><img src="{{asset('/images/sadaka-logo.png')}}" alt=""></a>
+                  <a class="navbar-brand" href="/"><img src="{{asset('/images/sadaka-logo.png')}}" alt=""></a>
                   
                 </div>
 
@@ -67,15 +67,8 @@
                   <ul class="nav navbar-nav">
 
                     <li><a href="{{route('index')}}">HOME</a></li>
-                    <li class="has-child"><a href="#">ABOUT</a>
-                        <ul class="submenu">
-                          <li class="submenu-item"><a href="{{route('about')}}">ABOUT</a></li>
-                          @if (Auth::id() == 1)
-                              
-                          <li class="submenu-item"><a href="{{route('AboutBDD')}}">BDD About</a></li>
-                          @endif
-                       </ul>
-                      </li>
+                    <li><a href="{{route('about')}}">ABOUT</a></li>
+
                     <li class="has-child"><a href="#">CAUSES</a>
 
                       <ul class="submenu">
@@ -86,24 +79,10 @@
                       </ul>
 
                     </li>
-                    <li class="has-child"><a class="is-active" href="#">GALLERY</a>
-                        <ul class="submenu">
-                          <li class="submenu-item"><a href="{{route('gallery')}}">GALLERY</a></li>
-                          @if (Auth::id() == 1)
-                              
-                          <li class="submenu-item"><a href="{{route('GalleryBDD')}}">BDD Gallery</a></li>
-                          @endif
-                       </ul>
-                      </li>
-                      <li class="has-child"><a href="#">CONTACT</a>
-                        <ul class="submenu">
-                          <li class="submenu-item"><a href="{{route('contact')}}">CONTACT</a></li>
-                          @if (Auth::id() == 1)
-                              
-                          <li class="submenu-item"><a href="{{route('ContactBDD')}}">BDD Contact</a></li>
-                          @endif
-                       </ul>
-                      </li>
+                    <li><a class="is-active" href="{{route('gallery')}}">GALLERY</a></li>
+
+                    <li><a href="{{route('contact')}}">CONTACT</a></li>
+
 
                   </ul>
 
@@ -230,7 +209,7 @@
 
 						<img src="{{asset('/images/gallery/boy-60729_1280.jpg')}}" alt="">
 						
-						<span class="on-hover">
+						<span class="on-hover">index.html
 							<span class="hover-caption">Image Caption</span>
 						</span>
 						

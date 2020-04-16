@@ -1,4 +1,8 @@
-@extends('layouts/master')
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content')
 
 @if(count($gallery) == 3)
 <div class="text-center"><a href="{{route('createGallery')}}"><button class="btn btn-outline-dark btn-lg mb-4">Ajouter une photo</button></a></div>
@@ -10,7 +14,7 @@
       <th>ID</th>
       <th>Titre de la photo</th>
       <th>Photo</th>
-      <th class="col-2">Actions</th>
+      <th>Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -28,3 +32,4 @@
   </tbody>
 </table>
 
+@stop

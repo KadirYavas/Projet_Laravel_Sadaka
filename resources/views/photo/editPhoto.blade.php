@@ -1,4 +1,8 @@
-@extends('layouts/master')
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content')
 
 <form class="m-3" action="{{route('updateGallery', $gallery->id)}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -23,3 +27,4 @@
     </div>
 </form>
 
+@stop

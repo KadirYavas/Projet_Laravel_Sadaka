@@ -1,23 +1,12 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+@section('title', 'AdminLTE')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('content_header')
+    <h1 class="m-0 text-danger text-center">Eh couillon</h1>
+@stop
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+    @section('content')
+    <div class="text-center"><img width="500px" src="https://images-na.ssl-images-amazon.com/images/I/812-cKEOnPL._AC_SY741_.jpg" alt=""></div>
+
+@stop

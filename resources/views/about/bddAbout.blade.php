@@ -1,5 +1,8 @@
-@extends('layouts/master')
+@extends('adminlte::page')
 
+@section('title', 'AdminLTE')
+
+@section('content')
 @if(count($about) == 0)
 <div class="text-center"><a href="{{route('createAbout')}}"><button class="btn btn-outline-dark btn-lg mb-4">Ajouter un texte</button></a></div>
 @endif
@@ -9,7 +12,7 @@
   <tr>
       <th>ID</th>
       <th>Texte</th>
-      <th class="col-2">Actions</th>
+      <th>Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -28,3 +31,4 @@
   </tbody>
 </table>
 
+@stop
