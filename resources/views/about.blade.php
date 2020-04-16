@@ -66,7 +66,15 @@
                   <ul class="nav navbar-nav">
 
                     <li><a href="{{route('index')}}">HOME</a></li>
-                    <li><a class="is-active"  href="{{route('about')}}">ABOUT</a></li>
+                    <li class="has-child"><a class="is-active" href="#">ABOUT</a>
+						<ul class="submenu">
+						  <li class="submenu-item"><a href="{{route('about')}}">ABOUT</a></li>
+						  @if (Auth::id() == 1)
+							  
+						  <li class="submenu-item"><a href="{{route('AboutBDD')}}">BDD About</a></li>
+						  @endif
+					   </ul>
+					  </li>
                     <li class="has-child"><a href="#">CAUSES</a>
 
                       <ul class="submenu">
@@ -77,7 +85,15 @@
                       </ul>
 
                     </li>
-                    <li><a href="{{route('gallery')}}">GALLERY</a></li>
+                    <li class="has-child"><a href="#">GALLERY</a>
+						<ul class="submenu">
+						  <li class="submenu-item"><a href="{{route('gallery')}}">GALLERY</a></li>
+						  @if (Auth::id() == 1)
+							  
+						  <li class="submenu-item"><a href="{{route('GalleryBDD')}}">BDD Gallery</a></li>
+						  @endif
+					   </ul>
+					  </li>
                     <li><a href="{{route('contact')}}">CONTACT</a></li>
 
                   </ul>
@@ -123,26 +139,9 @@
 
 					<h2 class="title-style-2">ABOUT SADAKA <span class="title-under"></span></h2>
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nulla quae possimus id fugit totam perspiciatis ad consequatur natus dolores unde ipsa, architecto, dignissimos corrupti explicabo provident debitis suscipit, beatae!
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi pariatur, voluptatum molestiae voluptas ducimus tempora numquam eligendi quos, quia aut quidem et, odio deleniti amet natus accusamus fugit! Temporibus, tenetur.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, ea, quisquam vero ullam nesciunt recusandae expedita similique nisi! Ducimus, reiciendis, quia. Explicabo minima error excepturi minus, aperiam illum fugit.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi pariatur, voluptatum molestiae voluptas ducimus tempora numquam eligendi quos, quia aut quidem et, odio deleniti amet natus accusamus fugit! Temporibus, tenetur.
-					</p>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, ea, quisquam vero ullam nesciunt recusandae expedita similique nisi! Ducimus, reiciendis, quia. Explicabo minima error excepturi minus, aperiam illum fugit , quia. Explicabo minima error excepturi minus, aperiam illum fugit.
-
-					</p>
+					@foreach ($about as $item)
+						<p>{{$item->texte}}</p>
+					@endforeach
 					
 				</div>
 
@@ -417,13 +416,10 @@
                             <h4 class="footer-title">About us <span class="title-under"></span></h4>
 
                             <div class="footer-content">
-                                <p>
-                                    <strong>Sadaka</strong> ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-                                </p> 
-
-                                <p>
-                                    ILorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-                                </p>
+								
+								@foreach ($contact as $item)
+									<p>{{$item->texte}}</p>
+								@endforeach
 
                             </div>
                             
@@ -439,23 +435,13 @@
 
                             <div class="footer-content">
                                 <ul class="tweets list-unstyled">
-                                    <li class="tweet"> 
+                                    @foreach ($tweet as $item)
+                                <li class="tweet"> 
 
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar  http://t.co/fTSazikPd4 
+                                  {{$item->texte}} 
 
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar  http://t.co/fTSazikPd4 
-
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar  http://t.co/fTSazikPd4 
-
-                                    </li>
+                              </li>
+                                @endforeach
 
                                 </ul>
                             </div>
@@ -475,37 +461,34 @@
 
                                 <div class="footer-form" >
                                     
-                                    <form action="php/mail.php" class="ajax-form">
-
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name" required>
-                                        </div>
-
-                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
-                                        </div>
-
-                                        <div class="form-group alerts">
-                        
-                                            <div class="alert alert-success" role="alert">
-                                              
-                                            </div>
-
-                                            <div class="alert alert-danger" role="alert">
-                                              
-                                            </div>
-                                            
-                                        </div>
-
-                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-submit pull-right">Send message</button>
-                                        </div>
-                                        
-                                    </form>
+                                    <form action="{{route('email')}}" method="POST">
+										@csrf
+										  <div class="form-group">
+											  <input type="text" name="name" class="form-control" placeholder="Name" required>
+										  </div>
+	  
+										   <div class="form-group">
+											  <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+										  </div>
+	  
+										  <div class="form-group">
+											  <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+										  </div>
+	  
+										  <div class="form-group alerts">
+						  
+											  <div class="alert alert-success" role="alert">
+												
+											  </div>
+	  
+											  <div class="alert alert-danger" role="alert">
+												
+											  </div>
+											  
+										  </div>
+											  <button type="submit" class="btn btn-submit pull-right">Send message</button>
+										  
+									  </form>
 
                                 </div>
                             </div>

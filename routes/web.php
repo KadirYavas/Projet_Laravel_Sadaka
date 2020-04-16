@@ -16,10 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'IndexController@index')->name('index');
 
 Route::get('/About', 'AboutController@index')->name('about');
+Route::get('/AboutBDD', 'AboutController@indexBDD')->name('AboutBDD');
+Route::get('/envoiAbout', 'AboutController@create')->name('createAbout');
+Route::post('/storeAbout', 'AboutController@store')->name('envoiAbout');
+Route::get('/editAbout/{id}', 'AboutController@edit')->name('editAbout');
+Route::post('/updateAbout/{id}', 'AboutController@update')->name('updateAbout');
+Route::get('/destroyAbout/{id}', 'AboutController@destroy')->name('destroyAbout');
 
 Route::get('/Gallery', 'GalleryController@index')->name('gallery');
+Route::get('/GalleryBDD', 'GalleryController@indexBDD')->name('GalleryBDD');
+Route::get('/envoiGallery', 'GalleryController@create')->name('createGallery');
+Route::post('/storeGallery', 'GalleryController@store')->name('envoiGallery');
+Route::get('/editGallery/{id}', 'GalleryController@edit')->name('editGallery');
+Route::post('/updateGallery/{id}', 'GalleryController@update')->name('updateGallery');
+Route::get('/destroyGallery/{id}', 'GalleryController@destroy')->name('destroyGallery');
 
 Route::get('/Contact', 'ContactController@index')->name('contact');
+Route::get('/ContactBDD', 'ContactController@indexBDD')->name('ContactBDD');
+Route::get('/envoiContact', 'ContactController@create')->name('createContact');
+Route::post('/storeContact', 'ContactController@store')->name('envoiContact');
+Route::get('/editContact/{id}', 'ContactController@edit')->name('editContact');
+Route::post('/updateContact/{id}', 'ContactController@update')->name('updateContact');
+Route::get('/destroyContact/{id}', 'ContactController@destroy')->name('destroyContact');
 
 Route::get('/Causes', 'CausesController@index')->name('causes');
 
@@ -28,3 +46,5 @@ Route::get('/Causes-Single', 'CausesController@indexSingle')->name('causes-singl
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/messageSend', 'MailController@store')->name('email');
