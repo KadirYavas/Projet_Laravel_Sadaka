@@ -95,7 +95,15 @@
                           @endif
                        </ul>
                       </li>
-                    <li><a href="{{route('contact')}}">CONTACT</a></li>
+                      <li class="has-child"><a href="#">CONTACT</a>
+                        <ul class="submenu">
+                          <li class="submenu-item"><a href="{{route('contact')}}">CONTACT</a></li>
+                          @if (Auth::id() == 1)
+                              
+                          <li class="submenu-item"><a href="{{route('ContactBDD')}}">BDD Contact</a></li>
+                          @endif
+                       </ul>
+                      </li>
 
                   </ul>
 
@@ -131,7 +139,21 @@
 			<div class="row">
 				
 
-					<a href="{{asset('/images/gallery/7610291856_931fb9f461_k.jpg')}}" class="col-md-3 col-sm-4 gallery-item lightbox">
+					
+                    
+                    @foreach ($gallery as $item)
+                    <a href="{{asset('images/'.$item->photo)}}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{{('images/'.$item->photo)}}" height="400px" width="150px" alt="">
+
+						<span class="on-hover">
+							<span class="hover-caption">{{$item->titre}}</span>
+						</span>
+
+					</a>
+                    @endforeach
+                        
+                    {{-- <a href="{{asset('/images/gallery/7610291856_931fb9f461_k.jpg')}}" class="col-md-3 col-sm-4 gallery-item lightbox">
 
 						<img src="{{asset('/images/gallery/7610291856_931fb9f461_k.jpg')}}" alt="">
 
@@ -254,8 +276,8 @@
 							<span class="hover-caption">Image Caption</span>
 						</span>
 						
-					</a> <!-- /.gallery-item -->
-					
+					</a> <!-- /.gallery-item --> --}}
+
 				
 			</div>
 			
@@ -264,7 +286,6 @@
 
 	</div> <!-- /.main-container  -->
 
-    footer
     <footer class="main-footer">
 
         <div class="footer-top">

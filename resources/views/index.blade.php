@@ -91,7 +91,7 @@
                     @endif
                  </ul>
                 </li>
-                <li class="has-child"><a href="#">GALLERY</a>
+                <li class="has-child"><a href="#">CONTACT</a>
                   <ul class="submenu">
                     <li class="submenu-item"><a href="{{route('contact')}}">CONTACT</a></li>
                     @if (Auth::id() == 1)

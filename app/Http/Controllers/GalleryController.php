@@ -13,7 +13,8 @@ class GalleryController extends Controller
     public function index() {
         $contact = Contact::all();
         $tweet = Tweet::orderBy('id', 'desc')->take(3)->get();
-        return view('gallery', compact('contact', 'tweet'));
+        $gallery = Gallerie::all();
+        return view('gallery', compact('contact', 'tweet', 'gallery'));
     }
     public function indexBDD() {
         $gallery = Gallerie::all();

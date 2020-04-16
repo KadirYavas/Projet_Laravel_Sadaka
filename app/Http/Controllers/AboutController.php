@@ -54,7 +54,7 @@ class AboutController extends Controller
         ]);
 
         $about = About::find($id);
-        $about->texte = $request->input('titre');
+        $about->texte = $request->input('texte');
 
         $about->save();
 

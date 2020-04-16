@@ -96,7 +96,15 @@
 						  @endif
 					   </ul>
 					  </li>
-                    <li><a href="{{route('contact')}}">CONTACT</a></li>
+					  <li class="has-child"><a href="#">CONTACT</a>
+						<ul class="submenu">
+						  <li class="submenu-item"><a href="{{route('contact')}}">CONTACT</a></li>
+						  @if (Auth::id() == 1)
+							  
+						  <li class="submenu-item"><a href="{{route('ContactBDD')}}">BDD Contact</a></li>
+						  @endif
+					   </ul>
+					  </li>
 
                   </ul>
 
