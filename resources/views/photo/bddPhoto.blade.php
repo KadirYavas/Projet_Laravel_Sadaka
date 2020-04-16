@@ -18,7 +18,7 @@
       <tr>
           <td>{{ $item->id }}</td>
           <td>{{ $item->titre }}</td>
-          <td><img src="{{$item->photo}}" alt="" width="75px"></td>
+          <td><img src="{{asset('images/'.$item->photo)}}" alt="" width="75px"></td>
           <td>
               <a href="{{route('editGallery', $item->id)}}"><button class="btn btn-outline-info m-1">Modifier</button></a>
               <a href="{{route('destroyGallery', $item->id)}}"><button class="btn btn-outline-danger">Supprimer</button></a>

@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index');
+    }
     public function index() {
         $contact = Contact::all();
         $tweet = Tweet::orderBy('id', 'desc')->take(3)->get();

@@ -9,6 +9,10 @@ use App\Message;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index', 'message');
+    }
     public function index() {
         $contact = Contact::all();
         $tweet = Tweet::orderBy('id', 'desc')->take(3)->get();
@@ -73,6 +77,6 @@ class ContactController extends Controller
         $message->message = $request->input('message');
         $message->save();
 
-        return redirect()->route('index');
+        return redirect()->back();
     }
 }

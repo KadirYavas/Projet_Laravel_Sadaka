@@ -455,7 +455,7 @@
 
                                 <div class="footer-form" >
                                     
-                                  <form action="{{route('message')}}" class="ajax-form" method="POST">
+                                  <form action="{{route('message')}}" method="POST">
                                     @csrf
                                       <div class="form-group">
                                           <input type="text" name="name" class="form-control" placeholder="Name" required>

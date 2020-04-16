@@ -9,6 +9,10 @@ use App\Tweet;
 
 class AboutController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index');
+    }
     public function index() {
         $about = About::all();
         $contact = Contact::all();
