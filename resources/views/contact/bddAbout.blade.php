@@ -19,7 +19,7 @@
           <td>{{ $item->texte }}</td>
           <td>
               <a href="{{route('editContact', $item->id)}}"><button class="btn btn-outline-info m-1">Modifier</button></a>
-              @if(count($about) == 0)
+              @if(count($contact) == 0)
               <a href="{{route('destroyContact', $item->id)}}"><button class="btn btn-outline-danger">Supprimer</button></a>
               @endif
           </td>

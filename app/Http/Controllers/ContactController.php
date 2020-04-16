@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Contact;
 use App\Tweet;
+use App\Message;
 
 class ContactController extends Controller
 {
@@ -63,5 +64,15 @@ class ContactController extends Controller
         $contact = Contact::find($id);
         $contact->delete();
         return redirect()->route('contact');
+    }
+    public function message(Request $request){
+
+        $message = new Message();
+        $message->name = $request->input('name');
+        $message->email = $request->input('email');
+        $message->message = $request->input('message');
+        $message->save();
+
+        return redirect()->route('index');
     }
 }

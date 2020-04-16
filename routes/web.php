@@ -38,6 +38,7 @@ Route::post('/storeContact', 'ContactController@store')->name('envoiContact');
 Route::get('/editContact/{id}', 'ContactController@edit')->name('editContact');
 Route::post('/updateContact/{id}', 'ContactController@update')->name('updateContact');
 Route::get('/destroyContact/{id}', 'ContactController@destroy')->name('destroyContact');
+Route::post('/sendMessage', 'ContactController@message')->name('message');
 
 Route::get('/Causes', 'CausesController@index')->name('causes');
 

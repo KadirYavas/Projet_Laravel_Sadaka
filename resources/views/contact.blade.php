@@ -142,43 +142,34 @@
 
 					<h2 class="title-style-2">CONTACT FORM <span class="title-under"></span></h2>
 
-					<form action="php/mail.php" class="contact-form ajax-form">
+					<form action="{{route('email')}}" method="POST">
+                        @csrf
+                          <div class="form-group">
+                              <input type="text" name="name" class="form-control" placeholder="Name" required>
+                          </div>
 
-						<div class="row">
+                           <div class="form-group">
+                              <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                          </div>
 
-							<div class="form-group col-md-6">
-	                            <input type="text" name="name" class="form-control" placeholder="Name*" required>
-	                        </div>
+                          <div class="form-group">
+                              <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+                          </div>
 
-	                         <div class="form-group col-md-6">
-	                            <input type="email" name="email" class="form-control" placeholder="E-mail*" required>
-	                        </div>
-							
-						</div>
+                          <div class="form-group alerts">
+          
+                              <div class="alert alert-success" role="alert">
+                                
+                              </div>
 
-                        <div class="form-group">
-                            <textarea name="message" rows="5" class="form-control" placeholder="Message*" required></textarea>
-                        </div>
-
-                        <div class="form-group alerts">
-                        
-                        	<div class="alert alert-success" role="alert">
-							  
-							</div>
-
-							<div class="alert alert-danger" role="alert">
-							  
-							</div>
-							
-                        </div>	
-
-                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary pull-right">Send message</button>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-					</form>
+                              <div class="alert alert-danger" role="alert">
+                                
+                              </div>
+                              
+                          </div>
+                              <button type="submit" class="btn btn-submit pull-right">Send message</button>
+                          
+                      </form>
 
 				</div>
 
@@ -280,7 +271,7 @@
 
                                 <div class="footer-form" >
                                     
-                                    <form action="{{route('email')}}" class="ajax-form" method="POST">
+                                    <form action="{{route('message')}}" class="ajax-form" method="POST">
                                         @csrf
                                           <div class="form-group">
                                               <input type="text" name="name" class="form-control" placeholder="Name" required>
