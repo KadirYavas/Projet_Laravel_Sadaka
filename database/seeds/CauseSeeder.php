@@ -14,25 +14,25 @@ class CauseSeeder extends Seeder
         DB::table('causes')->insert([
             'titre' => 'Water',
             'texte' => 'WaterWaterWaterWaterWater',
-            'prix' => 500000000,
+            'prix' => 10,
             'image' => 'water.jpg',
         ]);
         DB::table('causes')->insert([
             'titre' => 'Pizza',
             'texte' => 'PizzaPizzaPizzaPizzaPizzaPizzaPizza',
-            'prix' => 300010,
+            'prix' => 6,
             'image' => 'pizza.jpg',
         ]);
         DB::table('causes')->insert([
             'titre' => 'RedBull',
             'texte' => 'RedBullRedBullRedBullRedBull',
-            'prix' => 9957299,
+            'prix' => 2,
             'image' => 'redbull.jpg',
         ]);
         DB::table('causes')->insert([
             'titre' => 'Sushi',
             'texte' => 'SushiSushiSushi',
-            'prix' => 1331313,
+            'prix' => 30,
             'image' => 'sushi.jpg',
         ]);
     }

@@ -60,3 +60,6 @@ Auth::routes();
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+Route::get('/don/{id}', 'DonController@index')->name('don');
+Route::post('/envoiDon/{id}', 'DonController@store')->name('envoiDon');

@@ -51,7 +51,7 @@ class CausesController extends Controller
         $cause->image = $image;
         $cause->save();
 
-        return redirect()->route('cause');
+        return redirect()->route('causes');
     }
     // public function show($id)
     // {
@@ -83,12 +83,12 @@ class CausesController extends Controller
 
         $cause->save();
 
-        return redirect()->route('cause');
+        return redirect()->route('causes');
     }
     public function destroy($id)
     {
         $cause = Cause::find($id);
         $cause->delete();
-        return redirect()->route('cause');
+        return redirect()->route('causes');
     }
 }

@@ -126,7 +126,7 @@
 
                       <div class="cause">
 
-                          <img src="{{asset('images/'.$item->image)}}" alt="" class="cause-img">
+                          <img src="{{asset('images/'.$item->image)}}" height="200px" alt="" class="cause-img">
 
                           <div class="progress cause-progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
@@ -141,7 +141,7 @@
 
                           <div class="btn-holder text-center">
 
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+                            <a href="{{route('don', $item->id)}}" class="btn btn-primary"> DONATE NOW</a>
                             
                           </div>
 

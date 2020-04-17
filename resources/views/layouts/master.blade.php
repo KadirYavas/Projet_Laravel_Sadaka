@@ -61,7 +61,7 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
-
+     {{-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>  --}}
+     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=fr&key=AIzaSyAHAyBKY_0I38yZsb2xnidfeuoTUiM3l2U"></script>
     </body>
 </html>

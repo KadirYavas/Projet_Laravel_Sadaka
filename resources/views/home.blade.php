@@ -3,10 +3,10 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1 class="m-0 text-danger text-center">Eh couillon</h1>
+    <h1 class="m-0 text-danger text-center">Welcome Home</h1>
 @stop
 
     @section('content')
-    <div class="text-center"><img width="500px" src="https://images-na.ssl-images-amazon.com/images/I/812-cKEOnPL._AC_SY741_.jpg" alt=""></div>
+    <div class="text-center"><img width="800px" src="https://images.unsplash.com/photo-1509994196812-897f5a6ab49c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt=""></div>
 
 @stop

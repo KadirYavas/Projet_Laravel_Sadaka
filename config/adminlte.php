@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Mkdir</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -227,21 +227,46 @@ return [
             'text'        => 'About',
             'url'         => '/AboutBDD',
             'icon'        => 'fas fa-address-card',
+            'submenu'     => [
+                [
+                    'text'        => 'About',
+                    'url'         => '/AboutBDD',
+                    'icon'        => 'fas fa-address-card', 
+                ]
+            ]
         ],
         [
             'text'        => 'Gallery',
-            'url'         => '/GalleryBDD',
             'icon'        => 'far fa-images',
+            'submenu'     => [
+                [
+                    'text'        => 'Gallery',
+                    'url'         => '/GalleryBDD',
+                    'icon'        => 'fas fa-images', 
+                ]
+            ]
         ],
         [
             'text'        => 'Contact',
-            'url'         => '/ContactBDD',
             'icon'        => 'fas fa-address-book',
+            'submenu'     => [
+                [
+                    'text'        => 'Contact',
+                    'url'         => '/ContactBDD',
+                    'icon'        => 'fas fa-address-book', 
+                ]
+            ]
         ],
         [
             'text'        => 'Cause',
-            'url'         => '/CauseBDD',
             'icon'        => 'fas fa-pen',
+            'submenu'     => [
+                [
+                    'text'        => 'Cause',
+                    'url'         => '/CauseBDD',
+                    'icon'        => 'fas fa-pen', 
+                ]
+            ]
         ],
     ],
 
