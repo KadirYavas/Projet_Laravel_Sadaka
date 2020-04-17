@@ -41,8 +41,13 @@ Route::get('/destroyContact/{id}', 'ContactController@destroy')->name('destroyCo
 Route::post('/sendMessage', 'ContactController@message')->name('message');
 
 Route::get('/Causes', 'CausesController@index')->name('causes');
-
 Route::get('/Causes-Single', 'CausesController@indexSingle')->name('causes-single');
+Route::get('/CauseBDD', 'CausesController@indexBDD')->name('CauseBDD');
+Route::get('/envoiCause', 'CausesController@create')->name('createCause');
+Route::post('/storeCause', 'CausesController@store')->name('envoiCause');
+Route::get('/editCause/{id}', 'CausesController@edit')->name('editCause');
+Route::post('/updateCause/{id}', 'CausesController@update')->name('updateCause');
+Route::get('/destroyCause/{id}', 'CausesController@destroy')->name('destroyCause');
 
 Auth::routes();
 

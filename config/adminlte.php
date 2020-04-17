@@ -238,6 +238,11 @@ return [
             'url'         => '/ContactBDD',
             'icon'        => 'fas fa-address-book',
         ],
+        [
+            'text'        => 'Cause',
+            'url'         => '/CauseBDD',
+            'icon'        => 'fas fa-pen',
+        ],
     ],
 
     /*

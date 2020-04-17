@@ -120,240 +120,39 @@
 
 	            <div class="row">
 
-	      				
-		                <div class="col-md-3 col-sm-6">
+                
+                    @foreach ($cause as $item)
+                    <div class="col-md-3 col-sm-6">
 
-		                    <div class="cause">
+                      <div class="cause">
 
-		                        <img src="{{asset('/images/causes/cause-hunger.jpg')}}" alt="" class="cause-img">
+                          <img src="{{asset('images/'.$item->image)}}" alt="" class="cause-img">
 
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-		                            10$ / 500$
-		                          </div>
-		                        </div>
+                          <div class="progress cause-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                              {{$item->prix}}
+                            </div>
+                          </div>
 
-		                        <h4 class="cause-title"><a href="#">HUNGER AND POVERTY </a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
+                          <h4 class="cause-title"><a href="#">{{$item->titre}} </a></h4>
+                          <div class="cause-details">
+                              <p>{{$item->texte}}</p>
+                          </div>
 
-		                        <div class="btn-holder text-center">
+                          <div class="btn-holder text-center">
 
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+                            
+                          </div>
 
-		                        
+                          
 
-		                    </div> <!-- /.cause -->
-		                    
-		                </div> 
+                      </div> <!-- /.cause -->
+                      
+                  </div>
+                    @endforeach
 
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-education.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-		                            400$ / 700$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">EDUCATION AND TRAINING</a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div>
-
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-rights.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-		                            400$ / 1000$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">HUMAN RIGHTS</a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div>
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-culture.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-		                            400$ / 700$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">ARTS AND CULTURE </a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div>
-
-
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-hunger.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-		                            10$ / 500$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">HUNGER AND POVERTY </a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div> 
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-education.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-		                            400$ / 700$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">EDUCATION AND TRAINING</a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div>
-
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-rights.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-		                            400$ / 1000$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">HUMAN RIGHTS</a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
-		                    
-		                </div>
-
-		                <div class="col-md-3 col-sm-6">
-
-		                    <div class="cause">
-
-		                        <img src="{{asset('/images/causes/cause-culture.jpg')}}" alt="" class="cause-img">
-
-		                        <div class="progress cause-progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-		                            400$ / 700$
-		                          </div>
-		                        </div>
-
-		                        <h4 class="cause-title"><a href="#">ARTS AND CULTURE </a></h4>
-		                        <div class="cause-details">
-		                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at eros rutrum turpis viverra elementum semper quis ex. Donec lorem nulla, aliquam quis neque vel, maximus lacinia urna.
-		                        </div>
-
-		                        <div class="btn-holder text-center">
-
-		                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
-		                          
-		                        </div>
-
-		                        
-
-		                    </div> <!-- /.cause -->
+		                
 		                    
 		                </div>
 
