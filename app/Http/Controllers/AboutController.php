@@ -62,12 +62,12 @@ class AboutController extends Controller
 
         $about->save();
 
-        return redirect()->route('about');
+        return redirect()->route('AboutBDD');
     }
     public function destroy($id)
     {
         $about = About::find($id);
         $about->delete();
-        return redirect()->route('about');
+        return redirect()->route('AboutBDD');
     }
 }

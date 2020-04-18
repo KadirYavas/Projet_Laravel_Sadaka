@@ -221,7 +221,7 @@ return [
         [
             'text'        => 'Home',
             'url'         => '/',
-            'icon'        => 'fas fa-house-user',
+            'icon'        => 'fas fa-house-user text-light',
         ],
         [
             'text'        => 'About',
@@ -231,8 +231,8 @@ return [
                 [
                     'text'        => 'About',
                     'url'         => '/AboutBDD',
-                    'icon'        => 'fas fa-address-card', 
-                ]
+                    'icon'        => 'fas fa-circle text-red', 
+                ],
             ]
         ],
         [
@@ -242,7 +242,7 @@ return [
                 [
                     'text'        => 'Gallery',
                     'url'         => '/GalleryBDD',
-                    'icon'        => 'fas fa-images', 
+                    'icon'        => 'fas fa-circle text-green', 
                 ]
             ]
         ],
@@ -253,7 +253,7 @@ return [
                 [
                     'text'        => 'Contact',
                     'url'         => '/ContactBDD',
-                    'icon'        => 'fas fa-address-book', 
+                    'icon'        => 'fas fa-circle text-primary', 
                 ]
             ]
         ],
@@ -264,7 +264,7 @@ return [
                 [
                     'text'        => 'Cause',
                     'url'         => '/CauseBDD',
-                    'icon'        => 'fas fa-pen', 
+                    'icon'        => 'fas fa-circle text-warning', 
                 ]
             ]
         ],

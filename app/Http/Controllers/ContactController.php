@@ -19,8 +19,9 @@ class ContactController extends Controller
         return view('contact', compact('contact', 'tweet'));
     }
     public function indexBDD() {
+        $tweet = Tweet::all()->random(3);
         $contact = Contact::all();
-        return view('contact/bddAbout', compact('contact'));
+        return view('contact/bddAbout', compact('contact', 'tweet'));
     }
     public function create()
     {
@@ -61,13 +62,13 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return redirect()->route('contact');
+        return redirect()->route('ContactBDD');
     }
     public function destroy($id)
     {
         $contact = Contact::find($id);
         $contact->delete();
-        return redirect()->route('contact');
+        return redirect()->route('ContactBDD');
     }
     public function message(Request $request){
 

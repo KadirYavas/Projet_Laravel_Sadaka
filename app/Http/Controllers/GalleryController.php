@@ -71,12 +71,12 @@ class GalleryController extends Controller
 
         $gallery->save();
 
-        return redirect()->route('gallery');
+        return redirect()->route('GalleryBDD');
     }
     public function destroy($id)
     {
         $gallery = Gallerie::find($id);
         $gallery->delete();
-        return redirect()->route('gallery');
+        return redirect()->route('GalleryBDD');
     }
 }
